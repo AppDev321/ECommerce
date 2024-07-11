@@ -46,6 +46,7 @@ class MyApp extends StatelessWidget {
                 AppStaticColor.primary = hexToColor(primaryColor);
               }
               return MaterialApp.router(
+                debugShowCheckedModeBanner: false,
                 theme: getAppTheme(context: context, isDarkTheme: false),
                 title: 'Ready eCommerce Seller',
                 routerConfig: goRouter,
