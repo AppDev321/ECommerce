@@ -103,7 +103,7 @@ class _ShopInfoScreenState extends ConsumerState<ShopInfoScreen> {
                                   File(ref.watch(selectedShopLogo)!.path),
                                 )
                               : CachedNetworkImageProvider(
-                                      widget.profileDetails.shop.logo)
+                                      widget.profileDetails.shop.logo??"")
                                   as ImageProvider),
                     ),
                   ),

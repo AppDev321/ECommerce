@@ -187,7 +187,7 @@ class Products {
     name = json['name'];
     brand = json['brand'] ?? '';
     thumbnail = json['thumbnail'];
-    price = json['price'].toDouble() ?? 0.0;
+    price = double.tryParse(json['price']) ?? 0.0;
     quantity = json['quantity'];
     color = json['color'] ?? '';
     size = json['size'] ?? '';

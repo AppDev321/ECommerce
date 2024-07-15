@@ -80,9 +80,9 @@ class Shop {
   });
   late final int id;
   late final String name;
-  late final String logo;
-  late final String banner;
-  late final String address;
+  late final String? logo;
+  late final String? banner;
+  late final String? address;
   late final String openTime;
   late final String closeTime;
   late final List<String> offDay;
@@ -94,7 +94,7 @@ class Shop {
   late final int totalCategories;
   late final double rating;
   late final int totalReviews;
-  late final String description;
+  late final String? description;
 
   Shop.fromJson(Map<String, dynamic> json) {
     id = json['id'];

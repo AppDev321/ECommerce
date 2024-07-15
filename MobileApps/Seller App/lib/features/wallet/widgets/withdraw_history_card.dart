@@ -44,15 +44,18 @@ class WithdrawHistoryCard extends StatelessWidget {
                 style: AppTextStyle.text12B700.copyWith(
                     fontWeight: FontWeight.w400, color: AppStaticColor.gray),
               ),
-              GestureDetector(
-                onTap: () => debugPrint('context'),
-                child: Text(
-                  'Download Invoice',
-                  style: AppTextStyle.text12B700.copyWith(
-                    fontWeight: FontWeight.w400,
-                    color: AppStaticColor.blue,
-                    decorationColor: AppStaticColor.blue,
-                    decoration: TextDecoration.underline,
+              Visibility(
+                visible: false,
+                child: GestureDetector(
+                  onTap: () => debugPrint('context'),
+                  child: Text(
+                    'Download Invoice',
+                    style: AppTextStyle.text12B700.copyWith(
+                      fontWeight: FontWeight.w400,
+                      color: AppStaticColor.blue,
+                      decorationColor: AppStaticColor.blue,
+                      decoration: TextDecoration.underline,
+                    ),
                   ),
                 ),
               )

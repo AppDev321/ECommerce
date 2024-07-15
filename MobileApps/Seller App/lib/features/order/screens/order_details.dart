@@ -151,7 +151,9 @@ class OrderDetails extends ConsumerWidget {
           Gap(16.h),
           _buildDotDividerWidget(),
           Gap(12.h),
-          Align(alignment: Alignment.topCenter, child: _buildDownloadButton()),
+          Visibility(
+              visible: false,
+              child: Align(alignment: Alignment.topCenter, child: _buildDownloadButton())),
         ],
       ),
     );

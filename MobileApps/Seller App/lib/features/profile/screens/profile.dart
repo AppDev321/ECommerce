@@ -98,7 +98,7 @@ class Profile extends StatelessWidget {
                                   child: ClipRRect(
                                     borderRadius: BorderRadius.circular(16.dm),
                                     child: CachedNetworkImage(
-                                      imageUrl: profileDetails.shop.logo,
+                                      imageUrl: profileDetails.shop.logo ?? "",
                                       fit: BoxFit.cover,
                                     ),
                                   ),
@@ -335,10 +335,10 @@ class Profile extends StatelessWidget {
                 ),
                 Gap(16.h),
                 _buildInfoColumn(
-                    key: 'Address', value: profileDetails.shop.address),
+                    key: 'Address', value: profileDetails.shop.address??""),
                 Gap(16.h),
                 _buildDescriptionWidget(
-                    description: profileDetails.shop.description)
+                    description: profileDetails.shop.description??"")
               ],
             ),
           ),

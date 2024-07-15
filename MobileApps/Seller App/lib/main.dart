@@ -16,14 +16,14 @@ void main() async {
   await Hive.openBox(AppConstants.userBox);
 
   runApp(ProviderScope(child: MyApp()));
-  runApp(
-    ProviderScope(
-      child: DevicePreview(
-        enabled: false,
-        builder: (context) => MyApp(),
-      ),
-    ),
-  );
+  // runApp(
+  //   ProviderScope(
+  //     child: DevicePreview(
+  //       enabled: false,
+  //       builder: (context) => MyApp(),
+  //     ),
+  //   ),
+  // );
 }
 
 class MyApp extends StatelessWidget {

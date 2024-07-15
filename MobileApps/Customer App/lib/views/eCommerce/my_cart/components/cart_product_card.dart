@@ -115,7 +115,7 @@ class CartProductCard extends StatelessWidget {
           ),
           Gap(8.h),
           IncrementDecrementButton(
-            productQuantity: product.quantity,
+            productQuantity: int.parse(product.quantity),
             increment: increment,
             decrement: decrement,
           ),

@@ -51,7 +51,7 @@ class CartProduct {
     required this.unit,
   });
   late final int id;
-  late final int quantity;
+  late final String quantity;
   late final String name;
   late final String thumbnail;
   late final String? brand;

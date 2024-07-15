@@ -20,9 +20,11 @@ class OffDayPicker extends StatefulWidget {
 class _OffDayPickerState extends State<OffDayPicker> {
   @override
   void initState() {
-    for (var day in widget.offDays) {
-      String dayName = day[0].toUpperCase() + day.substring(1);
-      selectedValues.add(dayName);
+    if(widget.offDays.isNotEmpty) {
+      for (var day in widget.offDays) {
+        String dayName = day.toUpperCase();
+        selectedValues.add(dayName);
+      }
     }
     super.initState();
   }
