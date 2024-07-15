@@ -507,9 +507,11 @@ class _WalletState extends ConsumerState<Wallet> {
               groupValue: ref.watch(selectedFilterOption),
               onChanged: (selectedOption) {
                 final selectedKey = selectedOption!['key'];
+               // ref.read(selectedFilterOption.notifier).state = selectedOption;
+                //ref.read(walletDetailsServiceProvider(selectedKey));
+                debugPrint('Selected key: $selectedKey, value: $selectedOption');
                 ref.read(selectedFilterOption.notifier).state = selectedOption;
-                ref.read(walletDetailsServiceProvider(selectedKey));
-
+                ref.refresh(walletDetailsServiceProvider(selectedKey).notifier);
                 GoRouter.of(GlobalFunction.navigatorKey.currentContext!).pop();
               },
               title: Text(

@@ -40,7 +40,9 @@ class Dashboard extends ConsumerWidget {
           Gap(12.h),
           _buildProfitWidget(dashboardDataModel: dashboardDataModel),
           Gap(28.h),
-          _buildSalesStatistic(dashboardDataModel: dashboardDataModel),
+          Visibility(
+              visible: false,
+              child: _buildSalesStatistic(dashboardDataModel: dashboardDataModel)),
         ],
       ),
     );
