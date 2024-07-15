@@ -45,6 +45,7 @@ class MyApp extends StatelessWidget {
                 }
                 final selectedLocal = appSetting.get(AppConstants.appLocal);
                 return MaterialApp(
+                  debugShowCheckedModeBanner: false,
                   title: 'Ready Rider',
                   theme: AppTheme.lightTheme,
                   localizationsDelegates: [
