@@ -78,29 +78,32 @@ class OrderDetailsCard extends ConsumerWidget {
             isAmount: false,
           ),
           Gap(14.h),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              const Text(''),
-              GestureDetector(
-                onTap: () => _downloadFile(),
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.cloud_download,
-                      color: EcommerceAppColor.gray,
-                      size: 18.sp,
-                    ),
-                    Gap(5.w),
-                    Text(
-                      S.of(context).downloadInvoice,
-                      style: AppTextStyle(context).bodyTextSmall.copyWith(
-                          fontSize: 12.sp, color: colors(context).primaryColor),
-                    )
-                  ],
+          Visibility(
+            visible: true,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Text(''),
+                GestureDetector(
+                  onTap: () => _downloadFile(),
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.cloud_download,
+                        color: EcommerceAppColor.gray,
+                        size: 18.sp,
+                      ),
+                      Gap(5.w),
+                      Text(
+                        S.of(context).downloadInvoice,
+                        style: AppTextStyle(context).bodyTextSmall.copyWith(
+                            fontSize: 12.sp, color: colors(context).primaryColor),
+                      )
+                    ],
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           )
         ],
       ),
